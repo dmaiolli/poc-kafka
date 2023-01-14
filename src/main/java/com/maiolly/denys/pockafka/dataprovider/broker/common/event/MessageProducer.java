@@ -2,6 +2,7 @@ package com.maiolly.denys.pockafka.dataprovider.broker.common.event;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.maiolly.denys.pockafka.core.exception.SendKafkaMessageException;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageHeaders;
@@ -33,7 +34,7 @@ public class MessageProducer {
             Message<String> message = createMessage(event);
             streamBridge.send(event.name(), message);
         } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
+            throw new SendKafkaMessageException(e);
         }
     }
 
