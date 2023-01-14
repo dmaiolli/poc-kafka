@@ -1,4 +1,4 @@
-package com.maiolly.denys.pockafka.dataprovider.broker.common.event;
+package com.maiolli.denys.pockafka.dataprovider.broker.common.event;
 
 public interface BrokerEvent <P> {
     String name();

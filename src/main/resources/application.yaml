@@ -9,7 +9,7 @@ spring:
             retries: 3
           brokers: localhost:9092
           autoAddPartitions: false
-          autoCreateTopics: false
+          autoCreateTopics: true
           producer-properties:
             key:
               serializer: org.apache.kafka.common.serialization.StringSerializer

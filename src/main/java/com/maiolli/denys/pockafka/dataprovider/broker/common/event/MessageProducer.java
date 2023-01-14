@@ -1,8 +1,8 @@
-package com.maiolly.denys.pockafka.dataprovider.broker.common.event;
+package com.maiolli.denys.pockafka.dataprovider.broker.common.event;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.maiolly.denys.pockafka.core.exception.SendKafkaMessageException;
+import com.maiolli.denys.pockafka.core.exception.SendKafkaMessageException;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageHeaders;

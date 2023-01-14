@@ -1,7 +1,7 @@
-package com.maiolly.denys.pockafka.dataprovider.broker.masterblaster.event;
+package com.maiolli.denys.pockafka.dataprovider.broker.masterblaster.event;
 
-import com.maiolly.denys.pockafka.core.domain.dto.output.MasterBlasterEventPayload;
-import com.maiolly.denys.pockafka.dataprovider.broker.common.event.BrokerEvent;
+import com.maiolli.denys.pockafka.core.domain.dto.output.MasterBlasterEventPayload;
+import com.maiolli.denys.pockafka.dataprovider.broker.common.event.BrokerEvent;
 
 public record MasterBlasterEvent(MasterBlasterEventPayload payload) implements BrokerEvent<MasterBlasterEventPayload> {
 

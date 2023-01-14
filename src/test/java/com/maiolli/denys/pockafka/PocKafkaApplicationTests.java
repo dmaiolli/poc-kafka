@@ -1,4 +1,4 @@
-package com.maiolly.denys.pockafka;
+package com.maiolli.denys.pockafka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
