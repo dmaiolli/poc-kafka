@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: ms-master-blaster-application
+  cloud:
+    stream:
+      kafka:
+        binder:
+          configuration:
+            retries: 3
+          brokers: localhost:9092
+          autoAddPartitions: false
+          autoCreateTopics: true
+          producer-properties:
+            key:
+              serializer: org.apache.kafka.common.serialization.StringSerializer
+          consumer-properties:
+            key:
+              deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            value:
+              deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      bindings:
+        #OUTPUT
+        masterBlasterEvent:
+          destination: master-blaster-event
+          contentType: application/json
