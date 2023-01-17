@@ -19,6 +19,14 @@ spring:
             value:
               deserializer: org.apache.kafka.common.serialization.StringDeserializer
       bindings:
+        #INPUT
+        masterBlasterEvent-in-0:
+          destination: master-blaster-event
+          group: ${spring.application.name}
+          contentType: application/json
+          consumer:
+            maxAttempts: 3
+            concurrency: 3
         #OUTPUT
         masterBlasterEvent:
           destination: master-blaster-event
