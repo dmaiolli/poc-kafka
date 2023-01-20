@@ -11,13 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public record BrokerController(MasterBlasterGateway gateway) {
 
     @GetMapping
-    boolean send() {
-        try {
-            gateway.sendToQueue(new MasterBlasterEventPayload("123", "123"));
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
+    void send() {
+        gateway.sendToQueue(new MasterBlasterEventPayload("123", "123"));
     }
 
 }
