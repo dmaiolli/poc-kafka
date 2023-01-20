@@ -29,7 +29,6 @@ class MasterBlasterBrokerTest extends ContextTests {
         sendMessage(NEW_MASTER_BLASTER_EVENT_TOPIC, createProducer(embeddedKafkaBroker), payload);
 
         Awaitility.waitAtMost(5L, TimeUnit.SECONDS).untilAsserted(() -> {
-
         });
     }
 }
