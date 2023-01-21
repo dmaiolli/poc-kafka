@@ -1,4 +1,4 @@
-package com.maiolli.denys.pockafka.dataprovider.controller;
+package com.maiolli.denys.pockafka.entrypoint.controller;
 
 import com.maiolli.denys.pockafka.core.domain.dto.output.MasterBlasterEventPayload;
 import com.maiolli.denys.pockafka.core.gateway.MasterBlasterGateway;
