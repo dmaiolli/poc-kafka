@@ -1,14 +1,13 @@
 package com.maiolli.denys.pockafka.dataprovider.database.entity;
 
 import javax.persistence.*;
-import java.util.UUID;
 
 @Entity
 @Table(name = "master_blaster")
 public class MasterBlasterEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private UUID id;
+    private Long id;
     private String processId;
     private String message;
 
@@ -17,11 +16,11 @@ public class MasterBlasterEntity {
         this.message = message;
     }
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
