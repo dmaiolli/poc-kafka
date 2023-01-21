@@ -31,3 +31,10 @@ spring:
         masterBlasterEvent:
           destination: master-blaster-event
           contentType: application/json
+  datasource:
+    url: jdbc:h2:mem:masterblaster
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
