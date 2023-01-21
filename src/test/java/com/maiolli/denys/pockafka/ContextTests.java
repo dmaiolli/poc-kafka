@@ -2,10 +2,12 @@ package com.maiolli.denys.pockafka;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.maiolli.denys.pockafka.dataprovider.database.repository.MasterBlasterRepository;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.junit.jupiter.api.TestInstance;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
@@ -24,6 +26,9 @@ abstract public class ContextTests {
     protected final static String NEW_MASTER_BLASTER_EVENT_TOPIC = "master-blaster-event";
 
     protected ObjectMapper mapper = new ObjectMapper();
+
+    @Autowired
+    protected MasterBlasterRepository masterBlasterRepository;
 
     public Producer<String, String> createProducer(EmbeddedKafkaBroker broker) {
         DefaultKafkaProducerFactory<String, String> producerFactory = new DefaultKafkaProducerFactory<>(KafkaTestUtils.producerProps(broker));
